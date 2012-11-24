@@ -1,6 +1,8 @@
 package anagram.client;
 
 import anagram.shared.FieldVerifier;
+
+import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -41,7 +43,7 @@ public class Unagram_jaggler implements EntryPoint {
 	public void onModuleLoad() {
 		final Button sendButton = new Button("Send");
 		final TextBox nameField = new TextBox();
-		nameField.setText("GWT User");
+		nameField.setText("User");
 		final Label errorLabel = new Label();
 
 		// We can add style names to widgets
@@ -59,7 +61,7 @@ public class Unagram_jaggler implements EntryPoint {
 
 		// Create the popup dialog box
 		final DialogBox dialogBox = new DialogBox();
-		dialogBox.setText("Remote Procedure Call");
+		dialogBox.setText("Anagram Puzzle");
 		dialogBox.setAnimationEnabled(true);
 		final Button closeButton = new Button("Close");
 		// We can set the id of a widget by accessing its Element
@@ -67,6 +69,7 @@ public class Unagram_jaggler implements EntryPoint {
 		final Label textToServerLabel = new Label();
 		final HTML serverResponseLabel = new HTML();
 		VerticalPanel dialogVPanel = new VerticalPanel();
+
 		dialogVPanel.addStyleName("dialogVPanel");
 		dialogVPanel.add(new HTML("<b>Sending name to the server:</b>"));
 		dialogVPanel.add(textToServerLabel);
@@ -74,6 +77,7 @@ public class Unagram_jaggler implements EntryPoint {
 		dialogVPanel.add(serverResponseLabel);
 		dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
 		dialogVPanel.add(closeButton);
+//		Canvas canvas = Canvas.createIfSupported();
 		dialogBox.setWidget(dialogVPanel);
 
 		// Add a handler to close the DialogBox
