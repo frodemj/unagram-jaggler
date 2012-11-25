@@ -20,7 +20,7 @@
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='anagram.client.Unagram_jaggler'/>
+  <entry-point class='anagram.client.AnagramJuggler'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
